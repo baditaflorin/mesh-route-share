@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { MeshConfig, YRoom } from "@baditaflorin/mesh-common";
+import { MeshNameInput, type MeshConfig, type YRoom } from "@baditaflorin/mesh-common";
 
 type Props = { room: YRoom | null; config: MeshConfig };
 
@@ -208,12 +208,11 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
       </div>
 
       <div className="rt-controls">
-        <input
+        <MeshNameInput
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={setName}
           placeholder="your name"
           maxLength={48}
-          aria-label="your name"
           className="rt-name-input"
         />
         <button
