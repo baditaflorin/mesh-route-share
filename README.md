@@ -1,7 +1,7 @@
 # mesh-route-share
 
 [![pages](https://img.shields.io/badge/live-baditaflorin.github.io%2Fmesh-route-share-6366f1)](https://baditaflorin.github.io/mesh-route-share/)
-[![version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/baditaflorin/mesh-route-share/blob/main/package.json)
+[![version](https://img.shields.io/badge/version-0.1.1-blue)](https://github.com/baditaflorin/mesh-route-share/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 > Live route sharing with breadcrumb trails and checkpoint detection
