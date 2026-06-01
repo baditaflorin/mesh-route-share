@@ -194,16 +194,20 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
     <div className="rt-screen">
       <header className="rt-header">
         <h1>route share</h1>
+        <p className="rt-tagline">
+          See everyone&apos;s live location on one map. Type a name, hit share, and your dot +
+          breadcrumb trail appear for every peer in the room.
+        </p>
         <p className="rt-status">
           {fixList.length} {fixList.length === 1 ? "person" : "people"} sharing ·{" "}
-          {room.peerCount + 1} present
+          {room.peerCount + 1} {room.peerCount + 1 === 1 ? "tab" : "tabs"} in this room
         </p>
       </header>
 
       <div className="rt-privacy">
         <p>
-          opt-in. routes are kept in-memory in the mesh — close all tabs and it's gone. nothing
-          leaves the device except via the peer mesh.
+          Opt-in and ephemeral — your location is only sent after you tap share, lives in-memory in
+          the peer mesh, and is gone the moment every tab closes. Nothing touches a server.
         </p>
       </div>
 
@@ -230,6 +234,20 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
       <div className="rt-map">
         <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet">
           <rect width={W} height={H} fill="#0e1117" />
+
+          {fixList.length === 0 && (
+            <text
+              x={W / 2}
+              y={H / 2}
+              fill="rgba(255,255,255,0.4)"
+              fontSize="12"
+              textAnchor="middle"
+            >
+              {sharing
+                ? "waiting for a GPS fix…"
+                : "no one sharing yet — hit “share my route”, or open this page in a second tab"}
+            </text>
+          )}
 
           {checkpoint &&
             (() => {

@@ -4,7 +4,7 @@
 [![version](https://img.shields.io/badge/version-0.1.1-blue)](https://github.com/baditaflorin/mesh-route-share/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
-> Live route sharing with breadcrumb trails and checkpoint detection
+> A shared live map: everyone in the room sees each other's location dot and breadcrumb trail, plus a "who's reached the checkpoint" rally view.
 
 Live: **https://baditaflorin.github.io/mesh-route-share/**
 
@@ -16,7 +16,11 @@ Tip the dev: **https://www.paypal.com/paypalme/florinbadita**
 
 ## What it is
 
-Peer-to-peer browser app, no backend of its own beyond the self-hosted WebRTC stack listed below. Built on `@baditaflorin/mesh-common`, hosted on GitHub Pages from `docs/`.
+A peer-to-peer live-location map. Type a name and hit **share my route** — your dot and a growing breadcrumb trail appear on every other peer's map in the same room. Drop a **checkpoint** and the app shows, live, who has reached it. Everything is opt-in and in-memory: nothing is sent until you tap share, and it's gone the moment every tab closes.
+
+**Try it in 30 seconds:** open the live link in two browser tabs (they auto-join the same room), grant location in one, hit share, and watch your dot + trail appear in the other tab.
+
+No backend of its own beyond the self-hosted WebRTC stack listed below. Built on `@baditaflorin/mesh-common`, hosted on GitHub Pages from `docs/`.
 
 ## Quickstart (local)
 
